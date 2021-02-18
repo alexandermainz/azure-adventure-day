@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
   name: arcadebackend
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       name: arcadebackend      
@@ -56,3 +56,5 @@ spec:
             value: "RANDOM"
           - name: "FF_BETS"
             value: "1"
+          - name: "APPINSIGHTS_INSTRUMENTATIONKEY"
+            value: "8e2e217a-5c3c-43ef-a618-0ea9f28ef6bb"
