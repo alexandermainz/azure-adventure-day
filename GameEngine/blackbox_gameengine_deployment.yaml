@@ -61,6 +61,11 @@ spec:
           - containerPort: 80
             name: gameengine
             protocol: TCP
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
         env: 
           - name: "ConnectionStrings__GameEngineDB"
             value: "Server=tcp:game-sqlserver-e9cc7a.database.windows.net,1433;Initial Catalog=gamedb;Persist Security Info=False;User ID=gamedbadministrator;Password=l2y7sruELWN2m;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
